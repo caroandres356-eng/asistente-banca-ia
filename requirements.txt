@@ -1,0 +1,13 @@
+torch
+transformers
+datasets
+peft
+accelerate
+sentence-transformers
+chromadb
+langchain
+langchain-community
+langchain-huggingface
+langchain-chroma
+fastapi
+uvicorn
