@@ -25,6 +25,7 @@ rc.get_emb = lru_cache(maxsize=1)(rc.get_emb)
 from agent.db import DB_PATH, conectar, crear_base  # noqa: E402
 from agent.graph import grafo, cfg, _llm, _vectores_ejemplo  # noqa: E402
 from agent.tools import _base_vectorial  # noqa: E402
+from api import mantenimiento  # noqa: E402
 
 # Acciones esperando a un asesor. Vive en memoria, igual que MemorySaver:
 # si reinicias la API se pierden (en producción irían a un checkpointer persistente).
@@ -44,6 +45,7 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(title="Asistente Banco Andino", lifespan=lifespan)
+app.include_router(mantenimiento.router)
 
 
 class Pregunta(BaseModel):

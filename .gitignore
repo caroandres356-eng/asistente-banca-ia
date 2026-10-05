@@ -1,0 +1,29 @@
+# Entorno virtual y archivos generados por Python.
+.venv/
+__pycache__/
+**/__pycache__/
+*.pyc
+
+# Bases regenerables por la ingesta y el arranque de la API.
+chroma_db/
+banco.db
+
+# Salida de entrenamiento; se conservan data/finetune/ y data/docs/.
+finetune/salida/
+
+# Variables locales: se mantiene versionado el ejemplo de configuración.
+.env
+.env.*
+**/.env
+**/.env.*
+!.env.example
+!**/.env.example
+
+# Archivos de ejecución y configuración generados por Airflow.
+airflow/logs/
+airflow/config/
+
+# Configuración local del editor y archivos del sistema operativo.
+.vscode/
+.DS_Store
+Thumbs.db
