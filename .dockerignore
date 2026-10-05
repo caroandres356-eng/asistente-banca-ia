@@ -1,0 +1,22 @@
+# No se envía el entorno local de Python ni archivos compilados al build.
+.venv/
+__pycache__/
+**/__pycache__/
+
+# Se excluyen Git y el índice local, que se reconstruye dentro de la imagen.
+.git/
+chroma_db/
+banco.db
+
+# El entrenamiento y Airflow no forman parte de la imagen de la API.
+finetune/
+data/finetune/
+airflow/
+
+# No se incorporan secretos ni configuración local del editor.
+.env*
+**/.env*
+.vscode/
+
+# La documentación Markdown no se necesita para ejecutar la API.
+*.md

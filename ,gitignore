@@ -1,0 +1,7 @@
+.venv/
+chroma_db/
+finetune/salida/
+finetune/adaptador/
+__pycache__/
+*.pyc
+banco.db
